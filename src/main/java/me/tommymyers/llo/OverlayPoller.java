@@ -5,13 +5,10 @@ import java.util.ArrayList;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.CarpetBlock;
-import net.minecraft.block.Material;
 import net.minecraft.block.RailBlock;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BoundingBox;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.chunk.Chunk;
 
@@ -56,7 +53,7 @@ public class OverlayPoller extends Thread {
 		int playerPosY = (int)Math.floor(mc.player.y);
 		int playerChunkX = mc.player.chunkX;
         int playerChunkZ = mc.player.chunkZ; 
-		int skyLightSub = 15;// TODO find replacement - world.calculateSkylightSubtracted(1.0f);
+		//int skyLightSub = 15;// TODO find replacement - world.calculateSkylightSubtracted(1.0f);
 		int displayMode = LightLevelOverlay.DISPLAY_MODE;
 		boolean useSkyLight = LightLevelOverlay.USE_SKY_LIGHT;
 		
