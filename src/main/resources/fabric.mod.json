@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "lightleveloverlay",
+  "version": "${version}",
+
+  "name": "Light Level Overlay",
+  "description": "Shows the light level of surrounding blocks",
+  "authors": [
+    "Tommy Myers"
+  ],
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.tommymyers.llo.LightLevelOverlay"
+    ]
+  },
+
+  "requires": {
+    "fabricloader": ">=0.4.0",
+    "cloth": "*",
+    "fabric": "*"
+  }
+}
