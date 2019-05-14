@@ -7,9 +7,9 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.keybinding.FabricKeyBinding;
 import net.fabricmc.fabric.impl.client.keybinding.KeyBindingRegistryImpl;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.Camera;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Identifier;
 
 public class LightLevelOverlay implements ClientModInitializer {
@@ -43,7 +43,7 @@ public class LightLevelOverlay implements ClientModInitializer {
         ClothClientHooks.DEBUG_RENDER_PRE.register(() -> {
             if (LightLevelOverlay.enabled) {
                 Camera camera = MinecraftClient.getInstance().gameRenderer.getCamera();
-                ClientPlayerEntity player = client.player;
+                PlayerEntity player = client.player;
                 if (player == null)
                     return;
 
