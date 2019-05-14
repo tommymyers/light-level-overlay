@@ -68,12 +68,12 @@ public class OverlayPoller extends Thread {
 				int posZ = (chunkZ << 4) + offsetZ;
                 int maxY = playerPosY + 4, minY = Math.max(playerPosY - 40, 0);
                 BlockState preBlockState = null, curBlockState = chunk.getBlockState(new BlockPos(offsetX, maxY, offsetZ));
-				Block preBlock = null, curBlock = curBlockState.getBlock();
+				/* Block preBlock; */ Block curBlock = curBlockState.getBlock();
 				BlockPos prePos = null, curPos = new BlockPos(posX, maxY, posZ);
 				for (int posY = maxY - 1; posY >= minY; posY--) {
 					preBlockState = curBlockState;
 					curBlockState = chunk.getBlockState(new BlockPos(offsetX, posY, offsetZ));
-					preBlock = curBlock;
+					/* preBlock = curBlock; */
 					curBlock = curBlockState.getBlock();
 					prePos = curPos;
                     curPos = new BlockPos(posX, posY, posZ);
